@@ -52,4 +52,3 @@ if __name__ == "__main__":
     # send_button=browser.find_element_by_class_name('s_btn')
     # text_area.send_keys('23333')
     # ActionChains(browser).move_to_element(send_button).click(send_button).perform()
-
