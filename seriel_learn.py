@@ -23,7 +23,7 @@ def rx():
         if n > 0:
             print(n)
             data = serial1.read(n)
-            print(data)
+            print('[{}] -> [{}]'.format(data,data.decode('utf-8')))
 
 
 def rx_thread():
