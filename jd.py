@@ -55,8 +55,6 @@ def main():
 
 
 if __name__ == '__main__':
-    global success
-    success = False
     last_min = 0
     while True:
         if arrow.now() > arrow.get('2017-06-15 23:59:00+08:00'):
