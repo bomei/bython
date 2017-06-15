@@ -20,11 +20,11 @@ class JD:
         time.sleep(1)
 
     def go_to_xiaomi6(self):
-        url = 'http://item.jd.com/3312381.html'
+        url = 'http://item.jd.com/4099139.html'
         self.browser.get(url)
 
     def click_choose_btn(self):
-        choose_btn = self.browser.find_element_by_id('InitCartUrl')
+        choose_btn = self.browser.find_element_by_id('choose-btn-ko')
         ActionChains(self.browser).move_to_element(choose_btn).click(choose_btn).perform()
 
     def qiang(self):
@@ -32,10 +32,11 @@ class JD:
             try:
                 self.click_choose_btn()
                 time.sleep(0.01)
-                if self.browser.current_url != 'http://item.jd.com/3312381.html#none':
+                if self.browser.current_url != 'http://item.jd.com/4099139.html#none':
                     time.sleep(10000)
                 self.browser.refresh()
             except:
+                print('exception!')
                 time.sleep(10000)
 
 
