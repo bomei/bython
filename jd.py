@@ -20,7 +20,7 @@ class JD:
         time.sleep(1)
 
     def go_to_xiaomi6(self):
-        url = 'http://item.jd.com/4099139.html'
+        url = 'http://item.jd.com/4170752.html'
         self.browser.get(url)
 
     def click_choose_btn(self):
@@ -32,12 +32,12 @@ class JD:
             try:
                 self.click_choose_btn()
                 time.sleep(0.01)
-                if self.browser.current_url != 'http://item.jd.com/4099139.html#none':
-                    time.sleep(10000)
+                if self.browser.current_url != 'http://item.jd.com/4170752.html#none':
+                    s=input()
                 self.browser.refresh()
             except:
                 print('exception!')
-                time.sleep(10000)
+                s=input()
 
 
 def single():
@@ -50,19 +50,19 @@ def single():
 
 
 def main():
-    for i in range(4):
+    for i in range(1):
         t = threading.Thread(target=single)
         t.start()
 
 
 if __name__ == '__main__':
     last_min = 0
-    while True:
-        if arrow.now() > arrow.get('2017-06-15 23:59:00+08:00'):
-            break
-
-        if arrow.now().datetime.minute != last_min:
-            print(arrow.now())
-            last_min=arrow.now().datetime.minute
-            time.sleep(5)
+    # while True:
+    #     if arrow.now() > arrow.get('2017-06-18 23:58:30+08:00'):
+    #         break
+    #
+    #     if arrow.now().datetime.minute != last_min:
+    #         print(arrow.now())
+    #         last_min=arrow.now().datetime.minute
+    #         time.sleep(5)
     main()
